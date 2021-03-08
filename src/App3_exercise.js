@@ -25,7 +25,19 @@ class App3 extends React.Component{
             greeting: "welcome",
             name: "Yunis"
         };
+        this.login = this.login.bind(this);
     };
+
+    login(e){
+        e.preventDefault();
+        if (this.state.isLoggedIn){
+            this.state.isLoggedIn=false;
+        } else {
+            this.state.isLoggedIn=true
+        }
+        console.log("button event triggered, isLoggedIn_val: "+this.state.isLoggedIn)
+    }
+
     render(){
         if(this.state.isLoggedIn){
             this.state.logStatusMsg = "in";
@@ -46,7 +58,7 @@ class App3 extends React.Component{
         return(
             <div className="container" style={padding}>
                 <h1>{this.state.greeting}, {this.state.name}! You are currently logged {this.state.logStatusMsg}</h1>
-                <button className="btn btn-primary">Log {this.state.logButtonMsg}</button>
+                <button className="btn btn-primary" onClick={this.login}>Log {this.state.logButtonMsg}</button>
             </div>
         )
     }

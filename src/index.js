@@ -6,6 +6,7 @@ import App from './App';
 import App1 from './App1_exercise'
 import App2 from './App2_exercise';
 import App3 from './App3_exercise';
+import App4 from './App4_exercise';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,8 @@ ReactDOM.render(
     <App2/>
     <hr/>
     <App3 />
+    <hr/>
+    <App4 />
   </React.StrictMode>,
   document.getElementById('root')
 );
